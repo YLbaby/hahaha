@@ -1,0 +1,6 @@
+- Bert-VITS2/S3/S3_4.wav - - spoof
+- Bert-VITS2/S3/S3_10.wav - - spoof
+- Bert-VITS2/S2/S2_5.wav - - spoof
+- Bert-VITS2/S2/S2_8.wav - - spoof
+- Bert-VITS2/S1/S1_3.wav - - spoof
+- Bert-VITS2/S1/S1_7.wav - - spoof

@@ -65,12 +65,12 @@ def performance(cm_scores, Pfa_asv, Pmiss_asv, Pfa_spoof_asv, invert=False):
     bona_cm = cm_scores[cm_scores[5]=='bonafide']['1_x'].values
     spoof_cm = cm_scores[cm_scores[5]=='spoof']['1_x'].values
 
-    if invert==False:
+    if invert == False:
         eer_cm = em.compute_eer(bona_cm, spoof_cm)[0]
     else:
         eer_cm = em.compute_eer(-bona_cm, -spoof_cm)[0]
 
-    if invert==False:
+    if invert == False:
         tDCF_curve, _ = em.compute_tDCF(bona_cm, spoof_cm, Pfa_asv, Pmiss_asv, Pfa_spoof_asv, cost_model, False)
     else:
         tDCF_curve, _ = em.compute_tDCF(-bona_cm, -spoof_cm, Pfa_asv, Pmiss_asv, Pfa_spoof_asv, cost_model, False)
@@ -126,5 +126,5 @@ if __name__ == "__main__":
     if phase != 'progress' and phase != 'eval' and phase != 'hidden_track':
         print("phase must be either progress, eval, or hidden_track")
         exit(1)
-
+    # cm_key_file 即 
     _ = eval_to_score_file(submit_file, cm_key_file)
